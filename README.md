@@ -10,7 +10,7 @@ Python Basics, A quick and simple guide to start learning python.
 
 
 
-
+A flow Chart of PYTHON BASICS
 
 <img width="246" height="768" alt="python_basics_flowchart" src="https://github.com/user-attachments/assets/6c8c71fd-cdeb-4635-a6aa-82ce2c924813" />
 
