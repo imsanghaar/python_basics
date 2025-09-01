@@ -1,4 +1,4 @@
-Python Basics, A quick and simple guide to start learning python.
+Python Basics — A quick and simple guide to start learning Python
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ff819f75-ae1c-47e2-bacb-b18d4ceb89b6" />
 
@@ -549,6 +549,156 @@ elif checks another condition if the first is False.
 else is the fallback for all other cases.
 
 Always use int() for numeric input when comparing numbers.
+
+
+📝 Detailed Note on Nested If Elements
+🔹 What is a Nested If?
+
+A nested if is an if statement placed inside another if or elif block.
+
+It allows you to check multiple layers of conditions and handle more specific cases.
+
+Think of it like decision-making:
+
+First, you decide a broad category (e.g., negative, zero, or positive).
+
+Then, within a category, you make further decisions (e.g., if positive, check the exact range).
+
+🔹 Code (Original Version)
+num = int(input("Enter the value of number: "))
+if (num < 0):
+    print("Number is negative")
+elif (num > 0):
+    if (num <= 10):
+        print("Number is between 1-10")
+    elif (num > 10 and num == 20):
+        print("Number is between 11-20")
+    else:
+        print("Number is greater than 20")
+else:
+    print("Number is zero")
+
+🔹 Step-by-Step Execution
+
+Take Input
+
+input("Enter the value of number: ") prompts the user.
+
+The value is converted into an integer using int().
+
+Example: If the user enters 15, then num = 15.
+
+Check if Negative
+
+if (num < 0):
+    print("Number is negative")
+
+
+If the number is less than 0, it prints "Number is negative".
+
+Example: num = -3 → Output: Number is negative.
+
+Check if Positive
+
+elif (num > 0):
+    ...
+
+
+If the number is greater than 0, it goes into another nested structure.
+
+Example: num = 7 → The program will check further conditions.
+
+Nested If inside Positive Numbers
+
+If the number is between 1 and 10 (inclusive):
+
+if (num <= 10):
+    print("Number is between 1-10")
+
+
+Example: num = 8 → Output: Number is between 1-10
+
+If the number is greater than 10 but exactly equal to 20:
+
+elif (num > 10 and num == 20):
+    print("Number is between 11-20")
+
+
+Example: num = 20 → Output: Number is between 11-20
+❌ Problem: This condition only works for 20, not for 11–19.
+
+Else (any number greater than 20):
+
+else:
+    print("Number is greater than 20")
+
+
+Example: num = 50 → Output: Number is greater than 20
+
+Check if Zero
+
+else:
+    print("Number is zero")
+
+
+If the number is exactly 0, it prints Number is zero.
+
+🔹 Example Runs
+Input	Output
+-5	Number is negative
+0	Number is zero
+5	Number is between 1-10
+15	Number is greater than 20 (⚠ logical mistake, should be 11–20)
+20	Number is between 11-20
+100	Number is greater than 20
+🔹 Problem in Logic
+
+The condition:
+
+elif (num > 10 and num == 20):
+
+
+This only checks when num == 20.
+
+It ignores 11–19.
+
+For num = 15, it wrongly prints Number is greater than 20.
+
+✅ Corrected Version
+num = int(input("Enter the value of number: "))
+
+if num < 0:
+    print("Number is negative")
+elif num == 0:
+    print("Number is zero")
+else:  # num > 0
+    if num <= 10:
+        print("Number is between 1-10")
+    elif num <= 20:
+        print("Number is between 11-20")
+    else:
+        print("Number is greater than 20")
+
+🔹 Why This Correction Works
+
+Clear separation between negative, zero, and positive.
+
+Correct ranges:
+
+1–10
+
+11–20
+
+Greater than 20
+
+🎯 Key Takeaways
+
+Use nested if when you need more detailed decisions inside a broader decision.
+
+Always check for logical coverage (make sure all possible inputs fall into the right category).
+
+Use ranges (<=, >=) for cleaner conditions instead of combining multiple checks unnecessarily.
+
 
 <img width="246" height="768" alt="python_basics_flowchart" src="https://github.com/user-attachments/assets/5bbec034-e40d-4a53-af8a-affc2441a1de" />
 
