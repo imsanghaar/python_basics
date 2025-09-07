@@ -699,6 +699,42 @@ Always check for logical coverage (make sure all possible inputs fall into the r
 
 Use ranges (<=, >=) for cleaner conditions instead of combining multiple checks unnecessarily.
 
+Basic Calculator:
+# What it actually does you know that what calculator does but ypu can make it in python by using if-else-elif.
+# this is the full code:
+print('''
++ Add
+- Subtract
+* Multiply
+/ Divide
+''')
+
+num1= int(input("Enter your value1:-  "))
+num2= int(input("Enter your value2:-  "))
+opr = input("Enter the operator(+,-,*,/):  ")
+
+if opr == "+":
+    print(num1+num2)
+elif opr == "-":
+    print(num1-num2)
+elif opr == "*":
+    print(num1*num2)
+elif opr == "/":
+    print(num1/num2)
+else:
+    print("Invalid operator")
+
+
+print('''
++ Add
+- Subtract
+* Multiply
+/ Divide
+''')
+
+This line of code prints that things that you write in it. Like I have written some operations in it which are used in the program. Let's see what functions are used in it:
+
+
 
 <img width="246" height="768" alt="python_basics_flowchart" src="https://github.com/user-attachments/assets/5bbec034-e40d-4a53-af8a-affc2441a1de" />
 
@@ -710,7 +746,5 @@ It’s a starting point for anyone who wants to learn programming from scratch.
 
 👨‍💻 Author
 
-Imam Sanghaar (AI Engineer)
-
-💡 AI Enthusiast | Automation with n8n
+Imam Sanghaar Chandio
 Contact: 03441323835
