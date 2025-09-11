@@ -23,4 +23,4 @@ f7 = input("Enter the name of fruit 7: ")
 fruits.append(f7)
 
 name = input("Enter Your name: ")
-print("Hello Mr.", name, "these are the items you wanted to add on your list", fruits)
+print("Hello Mr.", name, ",these are the items you wanted to add on your list", fruits)
